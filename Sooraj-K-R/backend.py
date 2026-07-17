@@ -1,6 +1,7 @@
 import os
 import json
 from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
 from slowapi import _rate_limit_exceeded_handler, Limiter
 from pydantic import BaseModel
@@ -14,8 +15,22 @@ load_dotenv()
 limiter = Limiter(key_func=get_remote_address)
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.state.limiter = limiter
-app.add_exception_handler(RateLimitExceeded,_rate_limit_exceeded_handler)
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
+
+@app.get("/")
+async def health_check():
+    return {"status": "ok", "message": "Tone-Adjusted Reply Drafter API is running"}
 
 client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
 MEMORY_FILE = "memory.json"

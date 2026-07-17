@@ -1,10 +1,12 @@
 """
 Tone-Adjusted Reply Drafter — Streamlit Frontend
-Communicates with the FastAPI backend at http://127.0.0.1:8000/api/v1/draft
+Communicates with the FastAPI backend (configurable via BACKEND_URL env var).
+Defaults to the Render deployment URL for production.
 """
 
 import streamlit as st
 import requests
+import os
 
 # ──────────────────────────────────────────────
 # Page Config & Custom CSS
@@ -83,9 +85,13 @@ st.markdown(
 # ──────────────────────────────────────────────
 # Constants
 # ──────────────────────────────────────────────
-API_URL = "https://month-01-sprint-b-projects.onrender.com"
+API_BASE = os.environ.get(
+    "BACKEND_URL",
+    "https://month-01-sprint-b-projects.onrender.com"
+)
+API_URL = f"{API_BASE}/api/v1/draft"
 DEFAULT_TONES = ["Professional", "Gen-Z", "Passive-Aggressive"]
-REQUEST_TIMEOUT_SECONDS = 30
+REQUEST_TIMEOUT_SECONDS = 60
 
 # ──────────────────────────────────────────────
 # Header
