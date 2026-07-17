@@ -83,7 +83,7 @@ st.markdown(
 # ──────────────────────────────────────────────
 # Constants
 # ──────────────────────────────────────────────
-API_URL = "http://127.0.0.1:8000/api/v1/draft"
+API_URL = "https://month-01-sprint-b-projects.onrender.com"
 DEFAULT_TONES = ["Professional", "Gen-Z", "Passive-Aggressive"]
 REQUEST_TIMEOUT_SECONDS = 30
 
