@@ -6,6 +6,17 @@ Built with **FastAPI** on the backend, **Streamlit** on the frontend, and **Groq
 
 ---
 
+## 🌐 Live Demo
+
+| Service  | URL |
+|----------|-----|
+| **Frontend** (Streamlit Cloud) | [month-01-sprint-b-projects-4lmf8gzokygude26acsdzj.streamlit.app](https://month-01-sprint-b-projects-4lmf8gzokygude26acsdzj.streamlit.app/) |
+| **Backend API** (Render) | [month-01-sprint-b-projects.onrender.com](https://month-01-sprint-b-projects.onrender.com/) |
+
+> **Note:** The backend is hosted on Render's free tier, so the first request after a period of inactivity may take ~30–50 seconds due to cold start.
+
+---
+
 ## 🏗️ System Architecture
 
 ```mermaid
