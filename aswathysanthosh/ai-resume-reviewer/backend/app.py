@@ -7,7 +7,10 @@ app = FastAPI(title="AI Resume Reviewer")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Restrict this to your frontend URL in production
+    allow_origins=[
+    "http://localhost:5173",
+    "https://ai-resume-reviewer-liard.vercel.app",
+],  # Restrict this to your frontend URL in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
