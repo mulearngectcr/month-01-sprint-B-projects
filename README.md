@@ -1,112 +1,68 @@
-# Month 01 Sprint B - Final Projects
+# AI Hackathon Pitch Generator
 
-## Overview
+A full-stack AI application built with FastAPI and Google Gemini that takes a hackathon theme and instantly generates a comprehensive project pitch, technical stack recommendation, and 4-member team role distribution.
 
-This is the submission repository for the Month 1 Sprint B final projects.
+## 🚀 Features
 
-Build any AI-powered application of your choice using the skills you've learned throughout this sprint — FastAPI, Pydantic, authentication, rate limiting, LLM integration, and deployment.
+* **FastAPI Backend:** High-performance, clean REST API with CORS middleware configured for seamless frontend communication.
+* **Gemini 2.5 Flash Integration:** Connects securely via Google GenAI SDK to generate structured, professional hackathon synopses.
+* **4-Member Team Allocation:** Automatically delegates specialized responsibilities (AI Specialist, Frontend, Backend/IoT, Project Strategist) tailored to the theme.
+* **Single-Page UI:** Clean, responsive HTML/JavaScript frontend to fetch and display the generated pitch live.
 
-You can pick one of the suggested project ideas or come up with your own. The only requirement is that it must have a FastAPI backend connected to an LLM, a frontend of your choice, and must be deployed live.
+## 🛠️ Project Structure
 
----
-
-## Submission Guidelines
-
-### 1. Fork the Repository
-
-Click the **Fork** button at the top-right of this repository.
-
-### 2. Clone Your Fork
-
-```bash
-git clone https://github.com/<your-username>/month-01-sprint-B-projects.git
-cd month-01-sprint-B-projects
-```
-
-### 3. Create a Folder with Your Name
-
-Use lowercase letters and hyphens — no spaces.
+```text
+hackathon-pitch-api/
+├── main.py            # FastAPI application logic & AI prompt handling
+├── index.html         # Frontend user interface
+├── .env               # Local environment variables (API Keys)
+├── .gitignore         # Version control exclusion rules
+└── requirements.txt   # Python project dependencies
 
 ```
-month-01-sprint-B-projects/
-└── john-doe/
-    ├── backend.py
-    ├── frontend.py        (or index.html / App.jsx / app.py etc.)
-    ├── requirements.txt
-    ├── .env.example
-    ├── .gitignore
-    └── README.md
-```
 
-> ⚠️ Place all your files inside your named folder. Do not put them in the root of the repo.
+## 💻 Tech Stack
 
-### 4. Add a README Inside Your Folder
+* **Backend:** Python, FastAPI, Uvicorn
+* **LLM Engine:** Google Gemini 2.5 Flash (`google-generativeai`)
+* **Frontend:** HTML5, CSS3, Vanilla JavaScript (Fetch API)
 
-Your named folder must contain a `README.md` that includes:
+## 🔧 Installation & Local Setup
 
-```markdown
-## Project Name
+### 1. Clone and Navigate
 
-## What it does
-A short description of your project.
-
-## Tech Stack
-- Backend: FastAPI
-- Frontend: Streamlit / React / HTML etc.
-- LLM: Groq (model name)
-- Other libraries used
-
-## Live URLs
-- Frontend: https://your-frontend-url
-- Backend: https://your-backend-url
-
-## How to run locally
-Steps to set up and run the project locally.
-
-## Environment Variables
-Refer to .env.example for required keys.
-```
-
-### 5. Commit and Push
-
-```bash
-git add .
-git commit -m "Add submission - John Doe"
-git push origin main
-```
-
-### 6. Open a Pull Request
-
-1. Go to your fork on GitHub
-2. Click **Contribute → Open Pull Request**
-3. Set the PR title to: `Submission - John Doe`
-4. Add the following in the PR description:
+```cmd
+cd hackathon-pitch-api
 
 ```
-Project: <your project name>
-Frontend URL: https://your-frontend-url
-Backend URL: https://your-backend-url
+
+### 2. Configure Environment Variables
+
+Create a `.env` file in the root directory and add your Google AI Studio key:
+
+```text
+GEMINI_API_KEY=your_actual_api_key_here
+
 ```
 
----
+### 3. Set Up Virtual Environment & Install Dependencies
 
-## What to Submit
+```cmd
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
 
-| File | Required |
-|---|---|
-| `backend.py` (or equivalent) | ✅ Yes |
-| `frontend.py` / `index.html` / equivalent | ✅ Yes |
-| `requirements.txt` | ✅ Yes |
-| `.gitignore` | ✅ Yes |
-| `.env.example` | ✅ Yes |
-| `README.md` inside your folder | ✅ Yes |
-| `.env` | ❌ Never commit this |
+```
 
----
+### 4. Run the Development Server
 
-## Deployment
+```cmd
+uvicorn main:app --reload
 
-- Deploy your FastAPI backend to **Render** or **Railway**
-- Deploy your frontend to **Streamlit Cloud** / **Vercel** / **Netlify** / **GitHub Pages**
-- Make sure your frontend calls your **deployed backend URL**, not `localhost`
-- Both URLs must be live and working at submission time
+```
+
+* **API Documentation:** View and test the endpoints interactively at `[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)`
+
+### 5. Open the Frontend
+
+Double-click `index.html` to launch the user interface in any modern browser, type your hackathon theme, and generate your pitch.
