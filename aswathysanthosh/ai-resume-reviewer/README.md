@@ -21,7 +21,7 @@ Built with **React + FastAPI + Groq AI + Tailwind CSS**
 
 🎥 **Demo Video:** https://youtu.be/zsrY7lDidv8
 
-📄 **API Docs:** https://ai-resume-reviewer-a57t.onrender.com
+📄 **API Docs:** https://ai-resume-reviewer-a57t.onrender.com/docs
 
 </div>
 
@@ -52,16 +52,15 @@ AI Resume Reviewer is a full-stack web application that analyzes resumes using A
 
 ```
 images/
-│── home.png
-│── upload-success.png
-│── ats-analysis.png
-│── ai-feedback.png
-│── cover-letter.png
+│── homepage.png
+│── upload-resume.png
+│── resume-analysis.png
+
 ```
 
 ### Home Page
 
-![Home](images/home.png)
+![Home](images/homepage.png)
 
 ---
 
@@ -69,19 +68,19 @@ images/
 
 Upload a PDF resume and choose your target role.
 
-![Resume Upload](images/upload-success.png)
+![Resume Upload](images/upload-resume.png)
 
 ---
 
 ### ATS Analysis
 
-![ATS](images/ats-analysis.png)
+![ATS](images/resume-analysis.png)
 
 ---
 
-### AI Feedback
+### AI Suggestions
 
-![Feedback](images/ai-feedback.png)
+![Feedback](images/ai-suggestions.png)
 
 ---
 
@@ -127,7 +126,6 @@ AI-RESUME-REVIEWER
 │   ├── uploads
 │   ├── utils
 │   ├── app.py
-|   ├── models.py
 │   └── requirements.txt
 │
 └── README.md
@@ -140,7 +138,7 @@ AI-RESUME-REVIEWER
 ## Clone the repository
 
 ```bash
-git clone https://github.com/Aswathy486/month-01-sprint-B-projects.git
+git clone https://github.com/Aswathy486/ai-resume-reviewer.git
 ```
 
 ---
@@ -148,7 +146,7 @@ git clone https://github.com/Aswathy486/month-01-sprint-B-projects.git
 ## Navigate to the project
 
 ```bash
-cd month-01-sprint-B-projects/aswathysanthosh/ai-resume-reviewer
+cd ai-resume-reviewer
 ```
 
 ---
