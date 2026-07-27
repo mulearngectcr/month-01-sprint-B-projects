@@ -67,7 +67,7 @@
 
             try {
                 // This fetches the data from your local FastAPI server
-                const response = await fetch("http://127.0.0.1:8000/generate-pitch", {
+                const response = await fetch("https://month-01-sprint-b-projects-ay2r.onrender.com/generate-pitch", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ theme: theme })
