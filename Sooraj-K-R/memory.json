@@ -1,0 +1,47 @@
+[
+    {
+        "timestamp": "2026-07-17T16:41:51.280255",
+        "input_message": "Hi i am Sooraj K R, and i would like to meet the boss so that i can discuss my salary hike with him",
+        "context": "string",
+        "tones_requested": [
+            "Gen-Z",
+            "Passive-Aggressive",
+            "Professional"
+        ],
+        "ai_output": {
+            "Gen-Z": "Hey Sooraj, yeah no problem, I'll set up a meeting for you with the boss. He's super busy tho, so might take a bit of time. Let me know if you're free to come in anytime this week?",
+            "Passive-Aggressive": "Okay, great. So you want to discuss a salary hike with the boss, huh? I'll just go ahead and add that to your endless list of requests then.",
+            "Professional": "Hi Sooraj, thank you for reaching out. I'd be happy to schedule a meeting with our manager to discuss your salary review. Would you be available to meet on Monday or Tuesday this week?"
+        }
+    },
+    {
+        "timestamp": "2026-07-17T16:54:49.231209",
+        "input_message": "Dear Felicia,\n\nThank you for sharing the signed contract.\n\nThe payment has been processed accordingly.\n\nThank you.\n\nBest regards,\nYogesh",
+        "context": "I don't know what to reply with",
+        "tones_requested": [
+            "Professional",
+            "Gen-Z",
+            "Passive-Aggressive"
+        ],
+        "ai_output": {
+            "Professional": "Thank you for your prompt confirmation. I appreciate your efficiency in handling this matter.",
+            "Gen-Z": "k, got it! just wanted to confirm receipt of the signed contract btw",
+            "Passive-Aggressive": "Wow, thanks for reminding me to check my emails"
+        }
+    },
+    {
+        "timestamp": "2026-07-17T16:56:13.702794",
+        "input_message": "Hey, I know it's late, but can you completely rewrite the system architecture section of our report by tomorrow morning? The current version isn't cutting it, and we present to the faculty at 9 AM.",
+        "context": "Tell them you can't do it tonight because you are exhausted, but you can fix a few key points right before the presentation",
+        "tones_requested": [
+            "Professional",
+            "Gen-Z",
+            "Passive-Aggressive"
+        ],
+        "ai_output": {
+            "Professional": "I appreciate the tight deadline, but I won't be able to fully rewrite the system architecture section by tomorrow morning. I can help refine a few critical areas before the presentation, ensuring it meets the faculty's expectations.",
+            "Gen-Z": "idk if i can get the whole thing rewritten by tomarrow, but i can def hit a few key points right b4 we present",
+            "Passive-Aggressive": "I'm flattered you thought I could pull off a complete rewrite in such a short time, especially when I've been on edge all night. However, I'll make sure the most important bits are sorted by morning"
+        }
+    }
+]

@@ -1,0 +1,11 @@
+# Backend
+fastapi
+uvicorn
+groq
+slowapi
+python-dotenv
+pydantic
+
+# Frontend
+streamlit
+requests
